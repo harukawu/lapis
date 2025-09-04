@@ -29,7 +29,7 @@
 
   /* Miscellaneous */
   --font-serif: "Hiragino Mincho ProN", "Noto Serif CJK JP", "Yu Mincho", HanaMinA, HanaMinB, serif;
-  --font-sans: "Inter", "SF Pro Display", "Liberation Sans", "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Meiryo", HanaMinA, HanaMinB, sans-serif;
+  --font-sans: "YuMincho", "Inter", "SF Pro Display", "Liberation Sans", "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Meiryo", HanaMinA, HanaMinB, sans-serif;
   --light-mode-image-brightness: 85%;
   --dark-mode-image-brightness: 80%;
   --light-mode-tooltip-hover-color: rgb(256, 256, 256, 0.9);
@@ -452,6 +452,10 @@ main {
   position: relative;
 }
 
+.main-def:lang(zh), .main-def *:lang(zh){
+  font-family: "LXGWWenKai-Regular";
+}
+
 .main-def ol {
   margin-block: 0em;
 }
@@ -464,6 +468,10 @@ main {
   text-align: right;
   pointer-events: none;
   visibility: hidden;
+}
+
+.def-info:lang(zh), .def-info *:lang(zh){
+  font-family: "LXGWWenKai-Regular";
 }
 
 .mobile .def-info {
@@ -1167,4 +1175,9 @@ html.mobile .sentence, html:not(.mobile) .sentence-alt,
       content: "";
     }
   }
+}
+
+/* Make the audio button on iOS the way in PC */
+.mobile .audio-buttons {
+    position : relative;
 }
